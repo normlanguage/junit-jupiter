@@ -1,9 +1,8 @@
-package junit.jupiter
-
 import junit.jupiter.api.BeforeEach
 import junit.jupiter.api.DisplayName
 import junit.jupiter.api.Test
 import junit.jupiter.api.assertionsAssertEquals
+import junit.jupiter.api.assertionsAssertTrue
 
 class GreetingTest {
   Integer calls
@@ -19,7 +18,13 @@ class GreetingTest {
 
   @Test()
   @DisplayName(value: "runs a Norm method through JUnit Jupiter")
-  Void returnsAGreeting() {
+  Void formatsGreeting() {
+    String greeting = "Hello, Norm"
     assertionsAssertEquals(arg0: 1, arg1: calls)
+    assertionsAssertTrue(arg0: greeting.startsWith("Hello"))
   }
+}
+
+Module module() {
+  module(dependencies: [dependency(repository: "github", name: "junit.jupiter", version: 2)])
 }

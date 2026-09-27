@@ -1,7 +1,7 @@
 Module module() {
   return module(
     name: "junit.jupiter",
-    version: 1,
+    version: 2,
     binding: jarBinding(
       target: mavenJar(
         group: "org.junit.jupiter",
