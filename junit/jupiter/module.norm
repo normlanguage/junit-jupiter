@@ -1,7 +1,7 @@
 Module module() {
   return module(
     name: "junit.jupiter",
-    version: 4,
+    version: 5,
     exports: ["api.Test", "api.BeforeEach", "api.AfterEach", "api.BeforeAll", "api.AfterAll", "api.DisplayName", "api.Disabled", "api.Tag", "api.Nested", "api.RepeatedTest", "api.TestInstance", "api.Assertions"],
     binding: jarBinding(
       target: mavenJar(
@@ -52,4 +52,5 @@ Module module() {
     )
   )
 }
+
 
