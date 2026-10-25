@@ -1,7 +1,7 @@
 Module module() {
   return module(
     name: "junit.jupiter",
-    version: 3,
+    version: 4,
     exports: ["Test", "BeforeEach", "AfterEach", "BeforeAll", "AfterAll", "DisplayName", "Disabled", "Tag", "Nested", "RepeatedTest", "TestInstance", "Assertions"],
     binding: jarBinding(
       target: mavenJar(
@@ -10,20 +10,20 @@ Module module() {
         version: "6.1.2", resolution: sha256("db3c713c5c11adf7a5f1ffc320ed244da00d536d5860d56cd33dcd8b931d3511")
       ),
       api: [
-        jarType(name: "api.Test", members: []),
-        jarType(name: "api.BeforeEach", members: []),
-        jarType(name: "api.AfterEach", members: []),
-        jarType(name: "api.BeforeAll", members: []),
-        jarType(name: "api.AfterAll", members: []),
-        jarType(name: "api.DisplayName", members: ["value"]),
-        jarType(name: "api.Disabled", members: ["value"]),
-        jarType(name: "api.Tag", members: ["value"]),
-        jarType(name: "api.Nested", members: []),
-        jarType(name: "api.RepeatedTest", members: ["failureThreshold", "name", "value"]),
-        jarType(name: "api.TestInstance", members: ["value"]),
-        jarType(name: "api.TestInstance.Lifecycle", members: ["PER_CLASS", "PER_METHOD"]),
+        jarType(name: "api.Test", alias: "Test", members: []),
+        jarType(name: "api.BeforeEach", alias: "BeforeEach", members: []),
+        jarType(name: "api.AfterEach", alias: "AfterEach", members: []),
+        jarType(name: "api.BeforeAll", alias: "BeforeAll", members: []),
+        jarType(name: "api.AfterAll", alias: "AfterAll", members: []),
+        jarType(name: "api.DisplayName", alias: "DisplayName", members: ["value"]),
+        jarType(name: "api.Disabled", alias: "Disabled", members: ["value"]),
+        jarType(name: "api.Tag", alias: "Tag", members: ["value"]),
+        jarType(name: "api.Nested", alias: "Nested", members: []),
+        jarType(name: "api.RepeatedTest", alias: "RepeatedTest", members: ["failureThreshold", "name", "value"]),
+        jarType(name: "api.TestInstance", alias: "TestInstance", members: ["value"]),
+        jarType(name: "api.TestInstance.Lifecycle", alias: "TestInstance.Lifecycle", members: ["PER_CLASS", "PER_METHOD"]),
         jarType(
-          name: "api.Assertions",
+          name: "api.Assertions", alias: "Assertions",
           members: [],
           overloads: [
             jarOverload(name: "assertTrue", parameterTypes: ["boolean"]),
