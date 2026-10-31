@@ -11,3 +11,5 @@ norm test samples/GreetingTest.norm
 ```
 
 测试类和方法均为普通 Norm 代码；JUnit Platform 负责发现、生命周期与结果汇总。
+
+[许可证](LICENSE)

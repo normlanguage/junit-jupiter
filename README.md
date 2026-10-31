@@ -11,3 +11,5 @@ norm test samples/GreetingTest.norm
 ```
 
 Test classes and methods are ordinary Norm code; the JUnit Platform handles discovery, lifecycle, and result aggregation.
+
+[License](LICENSE)

@@ -1,6 +1,6 @@
 # junit.jupiter Skill
 
-Use this skill to work with Norm module `junit.jupiter` version 2. Use only declarations listed below.
+Use this skill to work with Norm module `junit.jupiter` version 7. Use only declarations listed below.
 
 ## `junit.jupiter`
 
@@ -463,19 +463,19 @@ annotation TestInstance implements TypeTarget, RuntimeRetention, InheritedAnnota
 #### `value`
 
 ```norm
-TestInstanceLifecycle value
+Lifecycle value
 ```
 
-Type: `TestInstanceLifecycle`
+Type: `Lifecycle`
 
-## `junit.jupiter`
+## `junit.jupiter.TestInstance`
 
-Source: `TestInstanceLifecycle.norm`
+Source: `TestInstance/Lifecycle.norm`
 
-### `TestInstanceLifecycle`
+### `Lifecycle`
 
 ```norm
-enum TestInstanceLifecycle
+enum Lifecycle
 ```
 
 #### `PER_CLASS`
